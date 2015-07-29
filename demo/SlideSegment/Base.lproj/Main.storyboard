@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfg-od-GmE" customClass="ScrollPageView">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZb-b1-KeU" customClass="SegmentView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nma-Er-jBI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Hfg-od-GmE" secondAttribute="trailing" id="3iA-WI-Mkh"/>
+                            <constraint firstItem="Hfg-od-GmE" firstAttribute="top" secondItem="tZb-b1-KeU" secondAttribute="bottom" id="Hac-En-4Zt"/>
+                            <constraint firstItem="tZb-b1-KeU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NnG-xb-K17"/>
+                            <constraint firstItem="tZb-b1-KeU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yr6-JI-QDO"/>
+                            <constraint firstAttribute="trailing" secondItem="tZb-b1-KeU" secondAttribute="trailing" id="h6D-d9-7F1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Hfg-od-GmE" secondAttribute="bottom" id="osM-N9-hz7"/>
+                            <constraint firstItem="Hfg-od-GmE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r8R-0W-f9i"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pageSegment" destination="tZb-b1-KeU" id="x8f-hG-WH5"/>
+                        <outlet property="pageView" destination="Hfg-od-GmE" id="oFU-he-b3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
