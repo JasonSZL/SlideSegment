@@ -25,17 +25,17 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    //实例化3个view
     UIView *v1 = [[UIView alloc]initWithFrame:CGRectZero];
     v1.backgroundColor = [UIColor purpleColor];
     
     UIView *v2 = [[UIView alloc]initWithFrame:CGRectZero];
-    v2.backgroundColor = [UIColor lightGrayColor];
+    v2.backgroundColor = [UIColor magentaColor];
     
     UIView *v3 = [[UIView alloc]initWithFrame:CGRectZero];
     v3.backgroundColor = [UIColor orangeColor];
     
-    //写这个控件时没考虑自动布局，所以下面这几行代码请务必写在viewWillAppear或者viewDidAppear方法中中。
-    //需要放上来的view，
+    //需要放上来的view，请务必在ScrollPageView被加载之后给pages属性赋值，否则你需要自己计算每个view的frame
     _pageView.pages = @[v1,v2,v3];
     
     //关联的segment
@@ -45,7 +45,7 @@
     _pageSegment.titles = @[@"标题1",@"标题2",@"标题3"];
     
     //设置选中栏的高亮颜色
-    _pageSegment.highlightColor = [UIColor blueColor];
+    _pageSegment.highlightColor = [UIColor colorWithRed:0 green:0.5 blue:0.9 alpha:1];
     
     //segment切换时候的回调
     _pageSegment.segmentChanged = ^(NSInteger index){

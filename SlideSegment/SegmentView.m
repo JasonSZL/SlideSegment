@@ -40,7 +40,7 @@
         [self addSubview:btn];
     }
     self.selectedIndex = 0;
-    view = [[UIView alloc]initWithFrame:CGRectMake(0, self.bounds.size.height-1, width, 2)];
+    view = [[UIView alloc]initWithFrame:CGRectMake(0, self.bounds.size.height-2, width, 2)];
     view.backgroundColor = kDefaultHighlightColor;
     [self addSubview:view];
 }
@@ -87,7 +87,7 @@
         self.segmentChanged(selectedIndex);
     }
     [UIView animateWithDuration:0.5 animations:^{
-        view.frame = CGRectMake(width*(selectedIndex), self.bounds.size.height-1, width, 2);
+        view.frame = CGRectMake(width*(selectedIndex), self.bounds.size.height-2, width, 2);
     }];
     for (int i=10; i<self.titles.count+10;i++) {
         UIButton *btn = (UIButton*)[self viewWithTag:i];
